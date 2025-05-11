@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a href="/edit/insert">Добавить новый заказ</a>
+    <br>
+    <a href="/">В главное меню</a>
+    <br>
+    {% if items %}
+        Все заказы<br>
+        <table border="0">
+            <tr>
+                <th>Дата заказа</th>
+                <th>Имя заказчика</th>
+                <th>Общая стоимость переезда</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item['date_z'] }}</td>
+                    <td>{{ item['contact'] }}</td>
+                    <td>{{ item['total_v'] }}</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="id_z" value="{{ item['id_z'] }}">
+                            <input type="submit" name="action" value="Удалить">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        Заказы отсутствуют<br>
+    {% endif %}
+</body>
+</html>

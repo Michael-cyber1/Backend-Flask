@@ -1,0 +1,15 @@
+{
+  "db_user": [
+    "",
+    "auth"
+  ],
+  "masters_of_db": [
+    "",
+    "auth",
+    "user_app",
+    "edit"
+  ],
+  "unauyhorized":[
+    "auth"
+  ]
+}

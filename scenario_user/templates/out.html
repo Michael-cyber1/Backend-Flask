@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title> Flask curse </title>
+</head>
+<body>
+<h1>{{name}}</h1>
+<ul>
+    {% for item in items %}
+    <li> {{item}} </li>
+    {% endfor %}
+</ul>
+<a href="{{url_for('user_app.user_index')}}"> Назад</a>
+</body>
+</html>

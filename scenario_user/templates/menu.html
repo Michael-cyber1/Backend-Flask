@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите запрос</title>
+</head>
+<body>
+<h1>
+    Выберите запрос
+    <br>
+    <!--<a href="/user/sql1"> Запрос 2</a> -->
+    <a href="{{url_for('user_app.user_sql1')}}"> Запрос 1</a>
+    <br>
+    <a href="{{url_for('user_app.user_sql2')}}"> Запрос 2</a>
+    <!--<a href="/user/sql2"> Запрос 2</a> -->
+    <br>
+    <a href="{{url_for('index')}}"> Назад </a>
+</h1>
+</body>
+</html>
